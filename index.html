@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Proposition financière – Application mobile SIG ProDAF Diffa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --primary:#0A5275;
+      --text:#333;
+      --muted:#666;
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --border:#e5e7eb;
+      --accent:#0b7bbd;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      margin:0; padding:0;
+    }
+    .wrap{
+      max-width: 900px;
+      margin: 24px auto;
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius:12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+      overflow:hidden;
+    }
+    header{
+      padding:24px;
+      background: linear-gradient(90deg, var(--primary), #0d6b96);
+      color:#fff;
+    }
+    header .title{
+      margin:0 0 6px 0;
+      font-size:24px;
+      font-weight:700;
+      letter-spacing:.3px;
+    }
+    header .subtitle{
+      margin:0;
+      opacity:.95;
+      font-size:14px;
+    }
+    .section{
+      padding:24px;
+      border-top:1px solid var(--border);
+    }
+    h2{
+      color:var(--primary);
+      font-size:18px;
+      margin:0 0 12px 0;
+      border-left:4px solid var(--primary);
+      padding-left:10px;
+    }
+    p{margin:10px 0; line-height:1.6}
+    .grid{
+      display:grid;
+      gap:12px;
+    }
+    @media(min-width:760px){
+      .grid.cols-2{grid-template-columns: 1fr 1fr;}
+      .grid.cols-3{grid-template-columns: 1fr 1fr 1fr;}
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:16px;
+      background:#fff;
+    }
+    .tag{
+      display:inline-block;
+      font-size:12px;
+      padding:2px 8px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      color:var(--muted);
+      margin-right:6px;
+    }
+    .price{
+      font-weight:700;
+      font-size:20px;
+      color:#0a6b3f;
+      margin-top:6px;
+    }
+    .muted{color:var(--muted)}
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:8px;
+      font-size:14px;
+    }
+    th, td{
+      border:1px solid var(--border);
+      padding:10px;
+      vertical-align:top;
+    }
+    th{
+      background:#f0f6fa;
+      text-align:left;
+      color:#0A5275;
+    }
+    .note{
+      background:#fffdf3;
+      border:1px solid #f3e7b3;
+      padding:10px 12px;
+      border-radius:8px;
+      font-size:13px;
+    }
+    .cta{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      padding:10px 14px;
+      border-radius:8px;
+      margin-right:8px;
+      margin-top:8px;
+      font-size:14px;
+    }
+    .sig{
+      display:grid; gap:16px;
+    }
+    @media(min-width:760px){ .sig{grid-template-columns:1fr 1fr;} }
+
+    /* Impression */
+    @media print{
+      body{background:#fff}
+      .wrap{border:none; box-shadow:none; margin:0; border-radius:0}
+      .cta{display:none}
+      header{color:#000; background:#fff; border-bottom:2px solid var(--primary)}
+      a{color:#000; text-decoration:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">Proposition financière</div>
+      <p class="subtitle">Application mobile SIG – Suivi & Evaluation | ProDAF Diffa</p>
+    </header>
+
+    <div class="section">
+      <h2>1) Coordonnées & contexte</h2>
+      <p><strong>Soumissionnaire :</strong> KANTA KAIGAMA KIARI Abdou, Géomaticien – Diffa | Tél. : (+227) 965 811 59 / 970 806 99 | Email : abdou.kantakaigamakiari@gmail.com</p>
+      <p><strong>Destinataire :</strong> Chef Suivi-Évaluation, Programme ProDAF Diffa</p>
+      <p>La présente proposition financière accompagne la note conceptuelle et couvre trois options évolutives afin d’adapter le périmètre aux priorités et ressources du ProDAF.</p>
+    </div>
+
+    <div class="section">
+      <h2>2) Synthèse des options & coûts</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Option</th>
+            <th>Périmètre fonctionnel (résumé)</th>
+            <th>Formation</th>
+            <th>Maintenance</th>
+            <th>Coût TTC (FCFA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Basique</strong><br><span class="tag">Collecte</span><span class="tag">Cartographie</span></td>
+            <td>Appli Android (offline/online), GPS, formulaires, carte des zones d’intervention.</td>
+            <td>1 jour</td>
+            <td>—</td>
+            <td class="price">1 500 000</td>
+          </tr>
+          <tr>
+            <td><strong>2. Intermédiaire</strong><br><span class="tag">+ Tableaux de bord</span><span class="tag">+ Notifications</span></td>
+            <td>Option 1 + indicateurs clés (dashboards), notifications push, espace bénéficiaires.</td>
+            <td>2 jours</td>
+            <td>—</td>
+            <td class="price">2 500 000</td>
+          </tr>
+          <tr>
+            <td><strong>3. Avancée</strong><br><span class="tag">+ Cloud</span><span class="tag">+ Multilingue</span><span class="tag">+ 12 mois maintenance</span></td>
+            <td>Option 2 + hébergement cloud sécurisé (ou serveur ProDAF), FR/Haoussa, SLA & mises à jour 12 mois.</td>
+            <td>2 jours</td>
+            <td>12 mois inclus</td>
+            <td class="price">3 500 000</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="muted">Les coûts ci-dessus incluent la conception, le développement, les tests, la documentation utilisateur et la livraison.</p>
+    </div>
+
+    <div class="section">
+      <h2>3) Détail par option</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3 style="margin:0 0 8px 0;">Option 1 – Basique</h3>
+          <ul>
+            <li>Collecte de données géoréférencées (offline/online)</li>
+            <li>GPS & photos horodatées</li>
+            <li>Cartographie des aménagements (Leaflet/Mapbox)</li>
+            <li>Export CSV/GeoJSON</li>
+            <li>Formation 1 jour (agents terrain)</li>
+          </ul>
+          <div class="price">1 500 000 FCFA</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px 0;">Option 2 – Intermédiaire</h3>
+          <ul>
+            <li>Toutes les features de l’Option 1</li>
+            <li>Tableaux de bord (bénéficiaires, superficies, AGR)</li>
+            <li>Notifications push ciblées</li>
+            <li>Espace bénéficiaires (historique d’appuis)</li>
+            <li>Formation 2 jours (terrain + cadre)</li>
+          </ul>
+          <div class="price">2 500 000 FCFA</div>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 8px 0;">Option 3 – Avancée</h3>
+          <ul>
+            <li>Toutes les features de l’Option 2</li>
+            <li>Hébergement cloud / serveur ProDAF (sécurisé)</li>
+            <li>Interface FR / Haoussa / Kanouri</li>
+            <li>Maintenance & MEP continue (12 mois)</li>
+            <li>Assistance prioritaire (SLA)</li>
+          </ul>
+          <div class="price">3 500 000 FCFA</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>4) Planning indicatif</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Livrables clés</th>
+            <th>Durée</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Atelier de cadrage</td>
+            <td>Spécifications fonctionnelles, formats de données, comptes tests</td>
+            <td>1 semaine</td>
+          </tr>
+          <tr>
+            <td>Développement & intégration</td>
+            <td>Appli mobile, formulaires, carte, dashboards (selon option)</td>
+            <td>2 à 3 mois</td>
+          </tr>
+          <tr>
+            <td>Pilote terrain</td>
+            <td>Tests, ajustements, stabilisation</td>
+            <td>2 semaines</td>
+          </tr>
+          <tr>
+            <td>Déploiement & formation</td>
+            <td>Formation, documentation, go-live</td>
+            <td>1 semaine</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="muted">Le planning final sera ajusté conjointement avec l’équipe ProDAF.</p>
+    </div>
+
+    <div class="section">
+      <h2>5) Modalités financières</h2>
+      <ul>
+        <li><strong>Échéancier de paiement (Option 1 & 2) :</strong> 40% à la commande – 40% à la livraison pilote – 20% à la mise en production.</li>
+        <li><strong>Échéancier (Option 3) :</strong> 40% commande – 40% MEP – 20% en fin de période de maintenance (12 mois).</li>
+        <li><strong>Validité de l’offre :</strong> 30 jours à compter de la date du courrier.</li>
+        <li><strong>Taxes :</strong> Prix exprimés TTC (ajuster si besoin selon régime fiscal).</li>
+      </ul>
+      <div class="note">
+        <strong>Note :</strong> Le coût d’hébergement cloud (si choisi) est inclus pour l’Option 3 durant 12 mois (plafonné). Pour les Options 1 & 2, l’hébergement peut être assuré par le ProDAF ou ajouté en supplément.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>6) Hypothèses & exclusions</h2>
+      <ul>
+        <li>Accès et validation des données de référence fournis par ProDAF.</li>
+        <li>Matériel terrain (smartphones/tablettes) fourni par ProDAF, sauf mention contraire.</li>
+        <li>Couverture réseau variable : l’application fonctionne hors-ligne avec synchronisation ultérieure.</li>
+        <li>Éventuelles intégrations spécifiques à d’autres systèmes : à chiffrer séparément.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>7) Liens de référence (en ligne)</h2>
+      <p>À personnaliser avec vos URLs :</p>
+      <p>
+        <a class="cta" href="https://pro-daf.vercel.app/" target="_blank">Note conceptuelle (en ligne)</a>
+        <a class="cta" href="https://prodaffinance.vercel.app/" target="_blank">Proposition fiancière(en ligne)</a>
+      </p>
+      <p>
+        <a class="cta" href="https://apercuprodaf.vercel.app/" target="_blank">Aperçu site ProDAF</a>
+        <a class="cta" href="https://sigtopo.vercel.app" target="_blank">Portail WebSIG Niger</a>
+      </p>
+      <p class="muted">Si vous préférez un partage via Google Drive/Dropbox, les liens peuvent être substitués ici.</p>
+    </div>
+
+    <div class="section">
+      <h2>8) Acceptation & signatures</h2>
+      <div class="sig">
+        <div class="card">
+          <p><strong>Pour le ProDAF Diffa</strong></p>
+          <p>Nom : ___________________________</p>
+          <p>Fonction : _______________________</p>
+          <p>Signature & cachet : _____________</p>
+          <p>Date : ____ / ____ / ______</p>
+        </div>
+        <div class="card">
+          <p><strong>Pour le prestataire</strong></p>
+          <p>Nom : [Prénom et NOM]</p>
+          <p>Fonction : _______________________</p>
+          <p>Signature : ______________________</p>
+          <p>Date : ____ / ____ / ______</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" style="text-align:center; font-size:12px; color:var(--muted)">
+      © 2025 KANTA KAIGAMA KIARI Abdou – Géomaticien, Diffa | Contact : (+227) 965 811 59 / 970 806 99 • abdou.kantakaigamakiari@gmail.com
+    </div>
+  </div>
+</body>
+</html>
